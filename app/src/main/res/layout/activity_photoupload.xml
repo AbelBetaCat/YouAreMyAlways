@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bar_grey">
+
+        <ImageView
+            android:id="@+id/left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:padding="15dp"
+            android:src="@drawable/picture_back"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:text="选择图片"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_right_upload"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_nor_down"
+            android:text="上传"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ly_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="拍摄时间: "
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
+        <EditText
+
+            android:id="@+id/et_photoinfo_data_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyEditText"
+            android:inputType="number"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="5dp"
+
+            android:ems="3"
+            android:textSize="18sp"
+            android:visibility="visible"/>
+        <!--android:text="2010"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="年"
+
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/et_photoinfo_data_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:theme="@style/MyEditText"
+            android:ems="2"
+            android:inputType="number"
+            android:layout_marginLeft="5dp"
+            android:textSize="18dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="月"
+            android:inputType="number"
+
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            />
+
+        <EditText
+
+            android:id="@+id/et_photoinfo_data_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="2"
+            android:inputType="number"
+            android:theme="@style/MyEditText"
+            android:layout_marginLeft="5dp"
+            android:textSize="18dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="日"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_photoinfo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:theme="@style/MyEditText"
+        android:hint="请输入照片中相关人物姓名（不包括本人）"
+        android:visibility="gone"/>
+
+
+
+    <EditText
+
+        android:id="@+id/et_photoinfo_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="请输入拍摄照片的地点"
+        android:textSize="18sp"
+        android:theme="@style/MyEditText"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/et_photoinfo_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="说说你的想法(不多于200字)..."
+        android:textSize="18sp"
+        android:theme="@style/MyEditText"
+        android:visibility="gone"/>
+
+
+
+    <!-- <Button
+         android:id="@+id/btn_upload"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:background="@drawable/picture_btn_music_shape"
+         android:text="上传"
+         android:textStyle="bold"
+         android:textSize="28dp"
+         android:textColor="@color/white"
+         android:visibility="gone"/>
+
+         -->
+
+</LinearLayout>

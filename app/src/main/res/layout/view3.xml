@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/light_gray"
+                android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:id="@+id/starttext"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="忆难忘，怎能忘记你"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="20dp"/>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/guide3"
+        android:scaleType="fitXY"/>
+
+
+</RelativeLayout>

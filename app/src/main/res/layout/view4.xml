@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/lastone"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/start_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_nor_down"
+        android:text="老人模式"
+        android:textColor="@android:color/primary_text_dark_nodisable"
+        android:textSize="22sp"
+        android:layout_marginLeft="18dp"
+        android:layout_alignBottom="@+id/start_young"
+        android:layout_alignTop="@+id/start_young"/>
+    <Button
+        android:id="@+id/start_young"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="102dp"
+        android:background="@drawable/btn_nor_down"
+        android:text="普通模式"
+        android:textColor="@android:color/primary_text_dark_nodisable"
+        android:textSize="22sp"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
